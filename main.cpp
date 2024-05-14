@@ -8,7 +8,7 @@ int main()
 {
 	int option = 2;
 	Student stud1;
-	Stack stack;
+	Stack* stack = new Stack();
 
 	cout << "[1] run" << endl
 		 << "[2] Read from file\n Or any other key to exit." << endl;
@@ -17,11 +17,11 @@ int main()
 	switch (option)
 	{
 	case 1:
-		stack.stackManager();
+		stack->stackManager();
 	case 2:
-		stack.loadData();
+		stack->loadData();
 		system("cls");
-		stack.stackManager();
+		stack->stackManager();
 
 	default:
 		cout << " exited ";
